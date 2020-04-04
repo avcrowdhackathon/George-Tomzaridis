@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../../css/polites-submit.css">
+        <link rel="stylesheet" href="../../../css/bootstrap.css">
+        <script src="../../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../../js/bootstrap.js"></script>   
+    </head>
+    <body style="background-color: #3F51B5!important; color: white!important;">
+        <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+            <a class="navbar-brand" href="/">
+              <i class="fas fa-head-side-mask"></i>
+              Ψηφιακή καταγραφή COVID-19
+            </a>
+        </nav>
+
+
+        <div class="jumbotron jumbotron-fluid message-polites" style="margin-top: 200px;">
+            <div class="container">
+              <h1 class="display-4"><i class="fas fa-exclamation-triangle"></i></h1> 
+              <h3 class="display-5"><%= errorcode %></h1>
+              <a href="/polites/register"> <button class="btn btn-primary">Επιστοφή στην φόρμα εγγραφής</button> </a>
+            </div>
+        </div>
+                 
+    </body>
+</html>

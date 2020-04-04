@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/polites-submit.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.js"></script>   
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+            <a class="navbar-brand" href="/">
+              <i class="fas fa-head-side-mask"></i>
+              Ψηφιακή καταγραφή COVID-19
+            </a>
+        </nav>
+
+
+        <div class="jumbotron jumbotron-fluid message-polites">
+            <div class="container">
+              <h1 class="display-4">Σύνδεση πολιτών</h1>
+            </div>
+        </div>
+        
+        <% if(errors) { %>
+          <div class="alert alert-danger polites-register-errors" role="alert">
+            <%= errors %>
+          </div>
+        <% } %>
+        <form id="polites-login" action="/polites/login" method="POST">
+            <div class="form-group">
+              <label for="polites-login-phone"><i class="fas fa-mobile-alt"></i> Κινητό τηλέφωνο</label>
+              <input type="phone" class="form-control" id="polites-login-phone" name="polites-login-phone" placeholder="69ΧΧΧΧΧΧΧΧ" aria-label="69ΧΧΧΧΧΧΧΧ">
+            </div>
+            <div class="form-group">
+              <label for="polites-login-password"><i class="fas fa-key"></i> Κωδικός Πρόσβασης</label>
+              <input type="password" class="form-control" id="polites-login-password" name="polites-login-password" placeholder="Κωδικός Πρόσβασης" aria-label="Κωδικός Πρόσβασης">
+            </div>
+            <div class="form-group">
+              <a href="/polites/forgotpass">Ξέχασα τον κωδικό μου</a>
+          </div>
+          <div class="form-group">
+              <a href="/polites/register">Δημιουργία νέου λογαριασμού</a>
+          </div>
+          <button class="btn btn-primary" name="polites-login-submit"><i class="fas fa-sign-in-alt"></i> Εισοδος</button>
+            
+          </form>
+
+          
+    </body>
+</html>

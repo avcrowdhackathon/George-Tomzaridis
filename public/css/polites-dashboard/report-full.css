@@ -1,0 +1,99 @@
+html body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+    font-size: 12px;
+    text-align: center;
+}
+
+
+#index-navbar-logo{
+    background-color: #3F51B5!important;
+}
+
+#index-navbar-logo a{
+    color: white!important;
+}
+
+.message-polites{
+    background-color: #3F51B5!important;
+    color: white!important;
+}
+
+
+.cards-services {
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-icon{
+    font-size: 66px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-settings{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.medical-reports-card{
+    max-width: 800px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    box-shadow: -4px 5px  #2d3b84d1;
+    
+}
+
+.medical-reports-card .card-header{
+    text-align: left;
+    font-size: 15px;
+}
+
+.medical-reports-card .card-header a{
+    float: right;
+    padding-left: 9px;
+    padding-right: 2px;
+}
+
+.medical-reports-card .card-body{
+    text-align: left;
+    font-size: 13px;
+}
+
+.medical-reports-card .card-body p{
+    text-align: left;
+    padding-left: 12px;
+    font-size: 13px;
+}
+
+.medical-reports-card .card-body .container .row .col-sm{
+   padding-bottom: 3px;
+}
+
+
+.title-report{
+    float: left;
+    padding: 0px 14px;
+    font-size: 16px;
+}
+
+.line-seperator-div{
+    border: 2px solid #37479e8a;
+    width: auto;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+

@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Πολίτη</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="http://localhost:3000/css/polites-dashboard/index.css">
+        <link rel="stylesheet" href="http://localhost:3000/css/bootstrap.css">
+        <script src="http://localhost:3000/js/jquery-3.4.1.min.js"></script>
+        <script src="http://localhost:3000/js/bootstrap.js"></script>    
+    </head>
+    <body>
+      <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+        <a class="navbar-brand" href="">
+          <i class="fas fa-head-side-mask"></i>
+          Portal Πολίτη
+        </a>
+    
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid message-polites">
+        <div class="container">
+            <div class="card medical-reports-card" style="color: black!important;">
+                <div class="card-header">
+                    <i class="fas fa-file-medical-alt pull-left"></i> Αναφορά #1 (25 Μαρτίου 2020 09:35) 
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row" style="font-size: 15px;">
+                          <div class="col-sm">
+                            <i class="fas fa-tachometer-alt"></i> Κατάσταση: <span class="badge badge-danger">Χάλια</span>
+                          </div>
+                          <div class="col-sm">
+                            <i class="fas fa-thermometer-three-quarters"></i> Πυρετός: <span class="badge badge-danger">39,9 C</span>
+                          </div>
+                          <div class="col-sm">
+                            <i class="fas fa-compress-alt"></i> Πίεση: <span class="badge badge-primary"> 14 / 9</span>
+                          </div>
+                          <div class="col-sm">
+                            <i class="fas fa-heart"></i> Παλμοί: <span class="badge badge-primary">84 ΒPM</span>
+                          </div>
+                        </div>
+                    </div><br>
+                    <p>Συμπτώματα: Ξηρός λαιμός, Δυσκολία στην αναπνοή, Πυρετός, Πονοκέφαλος</p>
+                    <div class="line-seperator-div"></div>
+                    <p>Σχόλια: 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in felis lectus. Proin fermentum nisi nibh, non maximus libero dictum id. Morbi dignissim commodo dui, in facilisis lacus bibendum vel. Maecenas lobortis lacinia lorem sed pharetra. Mauris id ultrices odio, id scelerisque risus. 
+                    </p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <h2>Μηνύματα αναφοράς</h2>
+
+    <div class="container">
+        <div class="card medical-reports-card" style="color: black!important;">
+            <div class="card-header" style="font-size: 15px">
+                <i class="fas fa-user-circle"></i> Νέο Μήνυμα 
+            </div>
+            <div class="card-body">
+                <div class="row" style="font-size: 15px;">
+                    <div class="col-sm">
+                      <i class="fas fa-tachometer-alt"></i> Προτεραιότητα: 
+                      <div class="form-group" style="padding-top: 3px;">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>ΕΡΩΤΗΣΗ</option>
+                          <option>ΕΠΕΙΓΟΝ</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+                <div class="line-seperator-div"></div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Μήνυμα:  </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Αποστολή</button>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="container">
+        <div class="card medical-reports-card" style="color: black!important; box-shadow: -4px 5px #7440d4!important;">
+            <div class="card-header" style="font-size: 15px">
+                <i class="fas fa-user-circle"></i> ΔΟΚΙΜΑΣΤΙΚΟΣ ΓΙΑΤΡΟΣ <span class="badge badge-danger">ΕΠΕΙΓΟΝ</span> <div style="float: right;">πριν 5 λεπτά</div>
+            </div>
+            <div class="card-body">
+                <p>Συνοπτικά: </p>
+                <div class="alert alert-primary" role="alert" style="margin-left: 10px;margin-right: 10px;">
+                    <i class="fas fa-hands-wash"></i> Να πλένεις καλά τα χέρια σου με σαπούνι και νερό. <br>
+                    <i class="fas fa-people-arrows"></i> Κράτα αποστάσεις απο τα υπόλοιπα άτομα της οικογένειας. <br>
+                    <i class="fas fa-pills"></i> Για τον πυρετό δοκίμασε το Nurofen
+                  </div>
+                <div class="line-seperator-div"></div>
+                <p style="font-size: 14px;">Γενικά σχόλια: 
+                    Αυτό που μου περιγράφεις όντως φαίνεται πολύ ύποπτο. Παρακαλώ δίαβασε τις συνοπτικές οδηγίες που αναφέρω πιο πάνω και ενημερωσέ με άμεσα!
+                </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="container">
+        <div class="card medical-reports-card" style="color: black!important;">
+            <div class="card-header" style="font-size: 15px">
+                <i class="fas fa-user-circle"></i> ΓΕΩΡΓΙΟΣ ΤΟΜΖΑΡΙΔΗΣ <span class="badge badge-danger">ΕΠΕΙΓΟΝ</span> <div style="float: right;">03 Απριλίου 2020 21:30</div>
+            </div>
+            <div class="card-body">
+                <p style="font-size: 14px;">Δεν έχω δύναμη, νιώθω κουρασμένος και ο πυρετός έφτασε 40!!!</p>
+            </div>
+          </div>
+    </div>
+
+    
+    </body>
+</html>

@@ -1,0 +1,53 @@
+html body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+#index-navbar-logo{
+    background-color: #3F51B5!important;
+}
+
+#index-navbar-logo a{
+    color: white!important;
+}
+
+.message-polites{
+    background-color: #3F51B5!important;
+    color: white!important;
+}
+
+#polites-register{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 50%;
+    display: inline-block;
+}
+
+#polites-register .form-group label{
+    float: left;
+}
+
+#index-navbar-logo{
+    background-color: #3F51B5!important;
+    color: white!important;
+}
+
+#index-navbar-logo a{
+    background-color: #3F51B5!important;
+    color: white!important;
+}
+
+.polites-register-errors{
+    max-width: 50%;
+    margin-left: auto;
+    width: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 12px;
+}

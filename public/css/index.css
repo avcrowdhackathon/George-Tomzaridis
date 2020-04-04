@@ -1,0 +1,141 @@
+html body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #3F51B5;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+#index-navbar-logo{
+    background-color: #3F51B5!important;
+}
+
+#index-navbar-logo a{
+    color: white!important;
+}
+
+
+#col-intro-row {
+    padding-top: 50px;
+}
+
+#col-intro-row #col-intro {
+    /*background-color: black; */
+    color: white;
+    height: 500px;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    padding-top: 46px;
+}
+
+#col-intro #h1-tag{
+    padding-top: 10px;
+}
+
+#col-intro #p-tag{
+    font-size: 15px;
+}
+
+.form-getstarted #h2-tag-form{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.form-getstarted{
+    border-radius: 6%;
+    box-shadow: -16px 10px #2d3b84d1;
+    background-color: white!important; 
+    color: black!important;
+    width: 100px;
+}
+
+.icon{
+    font-size: 50px;
+    text-align: center;
+}
+
+.form-getstarted .container .row #options-login{
+    text-align: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    background: #3F51B5;
+    color: white;
+    font-weight: 500;
+    height: auto!important;
+    padding: 20px 20px;
+    margin: 26px;
+    transition: 0.4s;
+
+}
+
+.form-getstarted .container .row #options-login a{
+    color: white;
+    height: 142px;
+    text-decoration: none;
+}
+
+.form-getstarted .container .row #options-login:hover{
+    background-color: #435096;
+    color: white;
+    box-shadow: -6px 4px #4e5fbb;
+    border: solid 2px #435096;
+}
+
+
+
+footer{
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 991px) {
+
+    footer{
+        padding-top: 60px;
+    }
+
+    #col-intro-row #col-intro{
+        padding-top: 20px;
+        height: 665px;
+    }
+
+    #col-intro-row .row .col-text-intro{
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    #col-intro-row #col-intro{
+        padding-top: 20px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    #col-intro-row #col-intro{
+        padding-top: 20px;
+        height: 600px;
+    }
+}
+
+  @media screen and (max-width: 1198px) {
+
+    #col-intro-row .row .col-text-intro{
+        padding-top: 20px!important;
+    } 
+  }
+
+  @media screen and (max-width: 764px) {
+
+    #col-intro-row .row .col-text-intro{
+        padding-top: 20px!important;
+        height: auto!important;
+    } 
+  }

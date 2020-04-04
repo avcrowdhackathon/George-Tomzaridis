@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/polites-register.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.js"></script> 
+        <script src="../js/polites-register.js"></script>    
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+            <a class="navbar-brand" href="/">
+              <i class="fas fa-head-side-mask"></i>
+              Ψηφιακή καταγραφή COVID-19
+            </a>
+        </nav>
+
+
+        <div class="jumbotron jumbotron-fluid message-polites">
+            <div class="container">
+              <h1 class="display-4">Εγγραφή πολιτών</h1>
+            </div>
+        </div>
+
+        <% var x; %>
+        <% if (errors){ %>
+        <div class="alert alert-danger polites-register-errors" role="alert">
+          <p>Παρακαλώ διορθώστε τα παρακάτω σφάλμα και δοκιμάστε ξανά:</p>
+          <ul>
+            <% for(x in errors) { %>
+            <li><%= errors[x]['msg'] %></li>
+            <% } %>
+          </ul>
+        </div>
+        <% } %>
+
+        <form method="POST" action="/polites/register" id="polites-register" accept-charset="UTF-8">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Όνομα</label>
+                <input type="text" class="form-control" id="polites-register-firstname" name="polites-register-firstname" placeholder="Όνομα" aria-label="Όνομα" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Επώνυμο</label>
+                <input type="text" class="form-control" id="polites-register-lastname" name="polites-register-lastname" placeholder="Επώνυμο" aria-label="Επώνυμο" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">ΑΜΚΑ</label>
+                <input type="text" class="form-control" id="polites-register-amka" name="polites-register-amka" placeholder="ΑΜΚΑ" aria-label="ΑΜΚΑ" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Αριθμός Ταυτότητας</label>
+                <input type="text" class="form-control" id="polites-register-idnumber" name="polites-register-idnumber" placeholder="Αριθμός Ταυτότητας" aria-label="Αριθμός Ταυτότητας" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Διεύθυνση Κατοικίας</label>
+                <input type="text" class="form-control" id="polites-register-homeaddress" name="polites-register-homeaddress" placeholder="Διεύθυνση Κατοικίας" aria-label="Διεύθυνση Κατοικίας" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Πόλη</label>
+                <input type="text" class="form-control" id="polites-register-city" name="polites-register-city" placeholder="Πόλη" aria-label="Πόλη" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">ΤΚ</label>
+                <input type="text" class="form-control" id="polites-register-tk" name="polites-register-tk" placeholder="Ταχυδρομικός Κώδικας" aria-label="Ταχυδρομικός Κώδικας" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Σταθερό Τηλέφωνο</label>
+                <input type="phone" class="form-control" id="polites-register-fixedphone" name="polites-register-fixedphone" placeholder="2310ΧΧΧΧΧΧ" aria-label="2310ΧΧΧΧΧΧ" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Κινητό Τηλέφωνο</label>
+                <input type="phone" class="form-control" id="polites-register-mobilephone" name="polites-register-mobilephone" placeholder="69XXXXXXXX" aria-label="69XXXXXXXX" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputAddress">Email</label>
+              <input type="email" class="form-control" id="polites-register-email" name="polites-register-email" placeholder="name@domain.com" aria-label="name@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Κωδικός Πρόσβασης</label>
+              <input type="password" class="form-control" id="polites-register-password" name="polites-register-password" placeholder="Κωδικός Πρόσβασης" aria-label="Κωδικός Πρόσβασης" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="polites-register-button-submit"><i class="fas fa-cloud-upload-alt"></i> Εγγραφή</button>
+            </div>
+        
+            
+          </form>
+          
+          
+    </body>
+</html>

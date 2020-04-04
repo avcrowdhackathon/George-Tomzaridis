@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Πολίτη | <%= userdata['Firstname'] %> <%= userdata['Lastname'] %></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../css/polites-dashboard/profile.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>    
+    </head>
+    <body>
+      <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+        <a class="navbar-brand" href="/polites/dashboard">
+          <i class="fas fa-head-side-mask"></i>
+          Portal Πολίτη
+        </a>
+    
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid message-polites">
+        <div class="container">
+          <h1 class="display-6"><i class="fas fa-user-circle" style="font-size: 96px;"></i></h1>
+         
+        </div>
+      </div>
+
+      <h2>Προσωπικά στοιχεία</h2>
+
+      <% if (error){ %>
+        <div class="alert alert-danger polites-register-errors" role="alert">
+            <%= error %>
+        </div>
+      <% } %>
+
+      <% if (alert){ %>
+        <div class="alert alert-success polites-register-errors" role="alert">
+            <%= alert %>
+        </div>
+      <% } %>
+
+      <% if(userdata['PCode'] != '-' || userdata['ECode'] != '-') { %>
+        <div class="alert alert-danger polites-register-errors" role="alert">
+          Λόγω αλλαγής κάποιων προσωπικών στοιχείων, στην επόμενη σας είσοδο θα πρέπει να περάσετε ξανά απο την διαδικασία επαλήθευσης.
+        </div>
+      <% } %>
+
+      <form method="POST" action="/polites/dashboard/profile" id="polites-register" accept-charset="UTF-8">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Όνομα</label>
+            <input type="text" class="form-control" id="polites-profile-firstname" name="polites-profile-firstname" value="<%= userdata['Firstname'] %>" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Επώνυμο</label>
+            <input type="text" class="form-control" id="polites-profile-lastname" name="polites-profile-lastname" value="<%= userdata['Lastname'] %>" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">ΑΜΚΑ</label>
+            <input type="text" class="form-control" id="polites-profile-amka" name="polites-profile-amka" value="<%= userdata['Amka'] %>" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Αριθμός Ταυτότητας</label>
+            <input type="text" class="form-control" id="polites-profile-idnumber" name="polites-profile-idnumber" value="<%= userdata['IDNum'] %>" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Διεύθυνση Κατοικίας</label>
+            <input type="text" class="form-control" id="polites-profile-homeaddress" name="polites-profile-homeaddress" value="<%= userdata['HomeAddress'] %>" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Πόλη</label>
+            <input type="text" class="form-control" id="polites-profile-city" name="polites-profile-city" value="<%= userdata['City'] %>" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">ΤΚ</label>
+            <input type="text" class="form-control" id="polites-profile-tk" name="polites-profile-tk" value="<%= userdata['AreaCode'] %>" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Σταθερό Τηλέφωνο</label>
+            <input type="phone" class="form-control" id="polites-profile-fixedphone" name="polites-profile-fixedphone" value="<%= userdata['FixedPhone'] %>" required>
+          </div>
+          <% if(userdata['PCode'] == '-') { %>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Κινητό Τηλέφωνο</label>
+              <input type="phone" class="form-control" id="polites-profile-mobilephone" name="polites-profile-mobilephone" value="<%= userdata['MobilePhone'] %>" required>   
+            </div>
+          <% }else{ %>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Κινητό Τηλέφωνο</label>
+              <input type="phone"  style="border: 2px solid #c30808ba;" class="form-control" id="polites-profile-mobilephone" name="polites-profile-mobilephone" value="<%= userdata['MobilePhone'] %>" required>
+              <small id="emailHelp" class="form-text text-muted" style="float: left; color: red!important;">Πρέπει να κάνετε ξανά επαλήθευση κινητού τηλεφώνου.</small>
+            </div>
+
+          <% } %>
+        </div>
+
+        
+        <% if(userdata['ECode'] == '-') { %>
+          <div class="form-group">
+            <label for="inputAddress">Email</label>
+            <input type="email" class="form-control" id="polites-profile-email" name="polites-profile-email" value="<%= userdata['Email'] %>" required>
+          </div>
+        <% }else{ %>
+          <div class="form-group">
+            <label for="inputAddress">Email</label>
+            <input type="email" style="border: 2px solid #c30808ba;" class="form-control" id="polites-profile-email" name="polites-profile-email" value="<%= userdata['Email'] %>" required>
+            <small id="emailHelp" class="form-text text-muted" style="float: left; color: red!important;">Πρέπει να κάνετε ξανά επαλήθευση email.</small>
+          </div>
+
+        <% } %>
+        <br>
+
+        
+        <div class="form-group">
+          <label for="inputAddress2">Κωδικός Πρόσβασης</label>
+          <input type="password" class="form-control" id="polites-profile-password" name="polites-profile-password" placeholder="Νέος Κωδικός Πρόσβασης" aria-label="Νέος Κωδικός Πρόσβασης">
+        </div>
+        <button type="submit" class="btn btn-primary" name="polites-profile-button-submit"><i class="fas fa-cloud-upload-alt"></i> Αλλαγή στοιχείων</button>
+        </div>
+    
+        
+      </form>
+
+      <div class="form-group">
+       <a href="/polites/dashboard/">Επιστροφή</a>
+      </div>
+
+    </body>
+</html>

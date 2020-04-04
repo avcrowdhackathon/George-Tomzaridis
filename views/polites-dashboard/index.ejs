@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Πολίτη | <%= userdata['Firstname'] %> <%= userdata['Lastname'] %></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=greek" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/131c23bef3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../../css/polites-dashboard/index.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>    
+    </head>
+    <body>
+      <nav class="navbar navbar-light bg-light" id="index-navbar-logo">
+        <a class="navbar-brand" href="">
+          <i class="fas fa-head-side-mask"></i>
+          Portal Πολίτη
+        </a>
+    
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid message-polites">
+        <div class="container">
+          <h1 class="display-6">Γεία σου, <%= userdata['Firstname'] %></h1>
+          <a href="/polites/dashboard/profile"><button type="button" class="btn panel-settings"><i class="fas fa-address-card"></i> Προφίλ</button></a> <a href="/polites/dashboard/logout"><button type="button" class="btn panel-settings"><i class="fas fa-door-open"></i> Έξοδος</button></a>
+        </div>
+      </div>
+
+      <h1><i class="fas fa-notes-medical"></i> Αναφορές</h1>
+
+
+      <div class="card medical-reports-card">
+        <a href="/polites/dashboard/report/" style="float: left; text-decoration-color: black; color: black;"><div class="card-header">
+            <i class="fas fa-file-medical-alt pull-left"></i> Αναφορά #1 (25 Μαρτίου 2020 09:35)  <a href=""><i class="fas fa-trash-alt"></i></a> <a href=""><i class="fas fa-user-edit"></i></a>
+        </div></a>
+        <div class="card-body">
+            <div class="container">
+                <div class="row" style="font-size: 15px;">
+                  <div class="col-sm">
+                    <i class="fas fa-tachometer-alt"></i> Κατάσταση: <span class="badge badge-danger">Χάλια</span>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-thermometer-three-quarters"></i> Πυρετός: <span class="badge badge-danger">39,9 C</span>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-compress-alt"></i> Πίεση: <span class="badge badge-primary"> 14 / 9</span>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-heart"></i> Παλμοί: <span class="badge badge-primary">84 ΒPM</span>
+                  </div>
+                </div>
+            </div><br>
+            <p>Συμπτώματα: Ξηρός λαιμός, Δυσκολία στην αναπνοή, Πυρετός, Πονοκέφαλος</p>
+            <div class="line-seperator-div"></div>
+            <p>Σχόλια: 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in felis lectus. Proin fermentum nisi nibh, non maximus libero dictum id. Morbi dignissim commodo dui, in facilisis lacus bibendum vel. Maecenas lobortis lacinia lorem sed pharetra. Mauris id ultrices odio, id scelerisque risus. 
+            </p>
+        </div>
+      </div>
+
+
+      <div class="card medical-reports-card">
+        <div class="card-header">
+            <i class="fas fa-file-medical-alt pull-left"></i> Νέα αναφορά
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row" style="font-size: 15px;">
+                  <div class="col-sm">
+                    <i class="fas fa-tachometer-alt"></i> Κατάσταση: 
+                        <div class="form-group" style="padding-top: 3px;">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Καλά</option>
+                              <option>Μέτρια</option>
+                              <option>Χάλια</option>
+                            </select>
+                        </div>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-thermometer-three-quarters"></i> Πυρετός: 
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Θερμοκρασία">
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-compress-alt"></i> Πίεση: 
+                    <input type="text" class="form-control" id="exampleFormControlInput1" style="margin-bottom: 6px;" placeholder="Μεγάλη Πίεση"> 
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Μικρή Πίεση">
+                  </div>
+                  <div class="col-sm">
+                    <i class="fas fa-heart"></i> Παλμοί: 
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Καρδιακή παλμοί">
+                  </div>
+                </div>
+            </div><br>
+            <label class="form-check-label" for="inlineCheckbox1">Συμπτώματα:  </label>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1"> Πυρετός</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1"> Ξηρός βήχας</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1"> Βήχας με φλέματα</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1"> Δυσκολία στην αναπνοή</label>
+            </div>
+            <br>
+             
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Σχόλια:  </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Αποθήκευση</button>
+
+        </div>
+      </div>
+
+      
+
+
+
+     
+      
+
+      
+      
+
+    
+    </body>
+</html>
